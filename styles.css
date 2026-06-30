@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: #f8fafc;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 3rem;
+
+    background-color: #1e293b;
+
+    border-bottom: 1px solid #334155;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6366f1;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f8fafc;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.nav-links a:hover {
+    color: #6366f1;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+#theme-toggle {
+    background-color:#ffffff;
+    border: none;
+    color: #1e293b;
+    font-size: 1.2rem;
+    cursor: pointer;
+    height: 3.5rem;
+    width: 5.5rem;
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-actions button {
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#Login-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid #475569;
+    height: 3.5rem;
+}
+
+#SignUp-btn {
+    background: #6366f1;
+    color: white;
+    height: 3.5rem;
+    width: 4.5rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 8rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero p {
+    margin-top: 1.5rem;
+    color: #94a3b8;
+    font-size: 1.2rem;
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.club-btn,
+.sponsor-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.club-btn {
+    background: #6366f1;
+    color: white;
+}
+
+.sponsor-btn {
+    background: #1e293b;
+    color: white;
+}

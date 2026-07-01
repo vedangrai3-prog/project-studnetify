@@ -193,8 +193,7 @@ roleOptions.forEach((btn) => {
         roleOptions.forEach((b) => b.classList.toggle("selected", b === btn));
     });
 });
-
-authForm?.addEventListener("submit", (e) => {
+authForm?.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const email = document.getElementById("email").value.trim();
@@ -204,35 +203,112 @@ authForm?.addEventListener("submit", (e) => {
     if (currentMode === "signup" && !fullName) {
         return showError("Enter your full name to sign up.");
     }
+
     if (currentMode === "signup" && !selectedRole) {
         return showError("Choose whether you're a club or a sponsor.");
     }
+
     if (!email || !password) {
         return showError("Fill in both email and password.");
     }
+
     if (password.length < 8) {
         return showError("Password must be at least 8 characters.");
     }
 
-    // No backend is wired up yet — this simulates a successful auth action.
-    submitBtn.disabled = true;
-    submitBtn.textContent = currentMode === "login" ? "Logging in..." : "Creating account...";
+    try {
 
-    setTimeout(() => {
-        submitBtn.disabled = false;
-        closeModal();
-        alert(
-            currentMode === "login"
-                ? `Welcome back! (demo — no account system connected yet)`
-                : `Account created as a ${selectedRole || "user"}! (demo — no account system connected yet)`
-        );
-    }, 600);
-});
+        submitBtn.disabled = true;
 
-function showError(message) {
-    formError.textContent = message;
+        if (currentMode === "signup") {
+
+            const response = await fetch(
+                "http://localhost:3000/signup",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        name: fullName,
+                        email,
+                        password,
+                        role: selectedRole
+                    })
+                }
+            );
+
+            const result = await response.json();
+
+            if (result.success) {
+
+                alert("Account created successfully!");
+
+                authForm.reset();
+
+                roleOptions.forEach(btn =>
+                    btn.classList.remove("selected")
+                );
+
+                selectedRole = null;
+
+                setMode("login");
+
+            } else {
+
+                showError(result.error || "Signup failed");
+
+            }
+
+        } else {
+
+            const response = await fetch(
+                "http://localhost:3000/login",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        email,
+                        password
+                    })
+                }
+            );
+
+            const result = await response.json();
+
+            if (result.success) {
+
+                localStorage.setItem(
+                    "user",
+                    JSON.stringify(result.user)
+                );
+
+                alert("Login successful!");
+
+                closeModal();
+
+            }
+        function showError(message) {
+        formError.textContent = message;
     formError.hidden = false;
 }
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+
+        showError("Cannot connect to server");
+
+    } finally {
+
+        submitBtn.disabled = false;
+
+    }
+});
 
 /* ---------- Opportunities filter (only present on opportunities.html) ---------- */
 const filterChips = document.querySelectorAll(".filter-chip");

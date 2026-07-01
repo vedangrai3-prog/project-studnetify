@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — SponsorBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+           <span class="logo-mark" aria-hidden="true"></span>SponsorBridge
+        </div>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="opportunities.html">Opportunities</a>
+            <a href="about.html" class="active">About</a>
+            <a href="how-it-works.html">How It Works</a>
+        </div>
+        <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle theme">◐</button>
+            <button id="Login-btn" data-modal="login">Login</button>
+            <button id="SignUp-btn" data-modal="signup">Sign Up</button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <span class="eyebrow">About SponsorBridge</span>
+        <h1>Built to close the gap between clubs and sponsors</h1>
+        <p>Most student clubs lose more time chasing funding than doing the thing the funding is for. We built SponsorBridge to fix that.</p>
+    </header>
+
+    <section class="split-section">
+        <div class="split-col club-side">
+            <span class="eyebrow">For clubs</span>
+            <h2>Funding without the cold emails</h2>
+            <p>Build one profile, list what you need, and let sponsors who already care about students like yours come to you.</p>
+            <ul class="check-list">
+                <li>Free to list any event or project</li>
+                <li>Track sponsor interest in real time</li>
+                <li>Get paid against milestones, not promises</li>
+            </ul>
+            <button class="club-btn" data-modal="signup" data-role="club">Post an opportunity</button>
+        </div>
+
+        <div class="bridge-divider" aria-hidden="true">
+            <svg viewBox="0 0 120 400" preserveAspectRatio="none">
+                <line x1="60" y1="0" x2="60" y2="400" class="bridge-cable-main"/>
+                <line x1="10" y1="40" x2="60" y2="0" class="bridge-cable"/>
+                <line x1="10" y1="120" x2="60" y2="80" class="bridge-cable"/>
+                <line x1="10" y1="200" x2="60" y2="160" class="bridge-cable"/>
+                <line x1="10" y1="280" x2="60" y2="240" class="bridge-cable"/>
+                <line x1="10" y1="360" x2="60" y2="320" class="bridge-cable"/>
+                <line x1="110" y1="40" x2="60" y2="0" class="bridge-cable"/>
+                <line x1="110" y1="120" x2="60" y2="80" class="bridge-cable"/>
+                <line x1="110" y1="200" x2="60" y2="160" class="bridge-cable"/>
+                <line x1="110" y1="280" x2="60" y2="240" class="bridge-cable"/>
+                <line x1="110" y1="360" x2="60" y2="320" class="bridge-cable"/>
+            </svg>
+        </div>
+
+        <div class="split-col sponsor-side">
+            <span class="eyebrow">For sponsors</span>
+            <h2>Reach students who actually want to hear from you</h2>
+            <p>Skip the generic sponsorship decks. Browse real, live requests from clubs whose audience matches your brand.</p>
+            <ul class="check-list">
+                <li>Filter by category, campus, and reach</li>
+                <li>See exactly what your sponsorship funds</li>
+                <li>Renew winning matches in one click</li>
+            </ul>
+            <button class="sponsor-btn" data-modal="signup" data-role="sponsor">Browse opportunities</button>
+        </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Platform impact">
+        <div class="stat">
+            <span class="stat-number">240+</span>
+            <span class="stat-label">Clubs funded</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">85</span>
+            <span class="stat-label">Active sponsors</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">$1.2M</span>
+            <span class="stat-label">Raised for campus projects</span>
+        </div>
+        <div class="stat">
+            <span class="stat-number">96%</span>
+            <span class="stat-label">Matches renewed next term</span>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <h2>Ready to build your bridge?</h2>
+        <p>It takes less than five minutes to create a profile.</p>
+        <div class="hero-buttons">
+            <button class="club-btn" data-modal="signup" data-role="club">I'm a Club</button>
+            <button class="sponsor-btn" data-modal="signup" data-role="sponsor">I'm a Sponsor</button>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <span class="logo"><span class="logo-mark" aria-hidden="true"></span>SponsorBridge</span>
+                <p>The bridge between student clubs and the sponsors who want to back them.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="opportunities.html">Opportunities</a>
+                    <a href="how-it-works.html">How It Works</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Account</h4>
+                    <a href="#" data-modal="login">Login</a>
+                    <a href="#" data-modal="signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 SponsorBridge. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Auth modal (shared by Login / Sign Up) -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+
+            <div class="modal-tabs">
+                <button class="modal-tab" data-tab="login">Login</button>
+                <button class="modal-tab" data-tab="signup">Sign Up</button>
+            </div>
+
+            <h2 id="modal-title" class="modal-title">Welcome back</h2>
+
+            <form id="auth-form" novalidate>
+                <div class="form-field signup-only">
+                    <label for="full-name">Full name</label>
+                    <input type="text" id="full-name" name="full-name" autocomplete="name">
+                </div>
+
+                <div class="form-field signup-only">
+                    <label>I am a...</label>
+                    <div class="role-select">
+                        <button type="button" class="role-option" data-role-option="club">Club</button>
+                        <button type="button" class="role-option" data-role-option="sponsor">Sponsor</button>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" autocomplete="current-password" required minlength="8">
+                </div>
+
+                <p class="form-error" id="form-error" hidden></p>
+
+                <button type="submit" class="submit-btn" id="submit-btn">Log in</button>
+            </form>
+
+            <p class="modal-switch">
+                <span id="switch-prompt">Don't have an account?</span>
+                <button type="button" id="switch-btn">Sign up</button>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

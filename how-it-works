@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works — SponsorBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+           <span class="logo-mark" aria-hidden="true"></span>SponsorBridge
+        </div>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="opportunities.html">Opportunities</a>
+            <a href="about.html">About</a>
+            <a href="how-it-works.html" class="active">How It Works</a>
+        </div>
+        <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle theme">◐</button>
+            <button id="Login-btn" data-modal="login">Login</button>
+            <button id="SignUp-btn" data-modal="signup">Sign Up</button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <span class="eyebrow">How it works</span>
+        <h1>Three steps from idea to funded</h1>
+        <p>Whether you're posting a request or backing one, here's the whole process, start to finish.</p>
+    </header>
+
+    <section class="how-it-works">
+        <ol class="steps">
+            <li class="step">
+                <span class="step-index">01</span>
+                <h3>Post your case</h3>
+                <p>Clubs describe the event, competition, or project they need funding for — budget, audience, and timeline included. It stays visible to sponsors until it's fully funded or closed.</p>
+            </li>
+            <li class="step">
+                <span class="step-index">02</span>
+                <h3>Get matched</h3>
+                <p>Sponsors browse live opportunities filtered by category, campus, and audience size, then reach out directly to the clubs that fit what they're looking to support.</p>
+            </li>
+            <li class="step">
+                <span class="step-index">03</span>
+                <h3>Build the bridge</h3>
+                <p>Terms get confirmed in-platform, funds are released against milestones instead of all at once, and both sides can track how the sponsorship played out.</p>
+            </li>
+        </ol>
+    </section>
+
+    <section class="detail-section">
+        <div class="detail-col">
+            <span class="eyebrow">For clubs</span>
+            <h2>What you can expect</h2>
+            <ul class="check-list">
+                <li>Listing a request is free, with no cap on how many you post</li>
+                <li>You choose which sponsor offers to accept</li>
+                <li>Funds release against the milestones you set, not upfront in full</li>
+                <li>Your funding history builds a track record for future requests</li>
+            </ul>
+        </div>
+        <div class="detail-col">
+            <span class="eyebrow">For sponsors</span>
+            <h2>What you can expect</h2>
+            <ul class="check-list">
+                <li>Every listing includes a clear budget breakdown and audience size</li>
+                <li>You can message a club before committing any funds</li>
+                <li>Milestone-based release means you're never funding blind</li>
+                <li>Renewing a sponsorship next term takes one click</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="cta-banner">
+        <h2>Ready to build your bridge?</h2>
+        <p>It takes less than five minutes to create a profile.</p>
+        <div class="hero-buttons">
+            <button class="club-btn" data-modal="signup" data-role="club">I'm a Club</button>
+            <button class="sponsor-btn" data-modal="signup" data-role="sponsor">I'm a Sponsor</button>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <span class="logo"><span class="logo-mark" aria-hidden="true"></span>SponsorBridge</span>
+                <p>The bridge between student clubs and the sponsors who want to back them.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="opportunities.html">Opportunities</a>
+                    <a href="how-it-works.html">How It Works</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Account</h4>
+                    <a href="#" data-modal="login">Login</a>
+                    <a href="#" data-modal="signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 SponsorBridge. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Auth modal (shared by Login / Sign Up) -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+
+            <div class="modal-tabs">
+                <button class="modal-tab" data-tab="login">Login</button>
+                <button class="modal-tab" data-tab="signup">Sign Up</button>
+            </div>
+
+            <h2 id="modal-title" class="modal-title">Welcome back</h2>
+
+            <form id="auth-form" novalidate>
+                <div class="form-field signup-only">
+                    <label for="full-name">Full name</label>
+                    <input type="text" id="full-name" name="full-name" autocomplete="name">
+                </div>
+
+                <div class="form-field signup-only">
+                    <label>I am a...</label>
+                    <div class="role-select">
+                        <button type="button" class="role-option" data-role-option="club">Club</button>
+                        <button type="button" class="role-option" data-role-option="sponsor">Sponsor</button>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" autocomplete="current-password" required minlength="8">
+                </div>
+
+                <p class="form-error" id="form-error" hidden></p>
+
+                <button type="submit" class="submit-btn" id="submit-btn">Log in</button>
+            </form>
+
+            <p class="modal-switch">
+                <span id="switch-prompt">Don't have an account?</span>
+                <button type="button" id="switch-btn">Sign up</button>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>

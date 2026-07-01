@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opportunities — SponsorBridge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+           <span class="logo-mark" aria-hidden="true"></span>SponsorBridge
+        </div>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="opportunities.html" class="active">Opportunities</a>
+            <a href="about.html">About</a>
+            <a href="how-it-works.html">How It Works</a>
+        </div>
+        <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle theme">◐</button>
+            <button id="Login-btn" data-modal="login">Login</button>
+            <button id="SignUp-btn" data-modal="signup">Sign Up</button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <span class="eyebrow">Live opportunities</span>
+        <h1>Clubs looking for sponsors right now</h1>
+        <p>Browse open requests by category, or post your own if you're funding a club.</p>
+    </header>
+
+    <div class="filter-bar" role="group" aria-label="Filter opportunities by category">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="tech">Tech</button>
+        <button class="filter-chip" data-filter="arts">Arts &amp; Culture</button>
+        <button class="filter-chip" data-filter="sports">Sports</button>
+        <button class="filter-chip" data-filter="business">Business</button>
+        <button class="filter-chip" data-filter="community">Community</button>
+    </div>
+
+    <section class="opportunities-grid" id="opportunities-grid">
+
+        <article class="opp-card" data-category="tech">
+            <div class="opp-top">
+                <span class="opp-tag tag-tech">Tech</span>
+                <span class="opp-goal">$3,500 goal</span>
+            </div>
+            <h3>Robotics Club — Regional Competition</h3>
+            <p>Funding for parts, travel, and registration to compete at the Northeast Robotics Championship.</p>
+            <div class="opp-meta">
+                <span>Stanford University</span>
+                <span>120 members</span>
+            </div>
+            <button class="opp-btn" data-modal="signup" data-role="sponsor">Sponsor this</button>
+        </article>
+
+        <article class="opp-card" data-category="arts">
+            <div class="opp-top">
+                <span class="opp-tag tag-arts">Arts &amp; Culture</span>
+                <span class="opp-goal">$1,800 goal</span>
+            </div>
+            <h3>Film Society — Spring Screening Series</h3>
+            <p>Venue rental and licensing for a six-week campus film series open to the public.</p>
+            <div class="opp-meta">
+                <span>UCLA</span>
+                <span>65 members</span>
+            </div>
+            <button class="opp-btn" data-modal="signup" data-role="sponsor">Sponsor this</button>
+        </article>
+
+        <article class="opp-card" data-category="sports">
+            <div class="opp-top">
+                <span class="opp-tag tag-sports">Sports</span>
+                <span class="opp-goal">$5,000 goal</span>
+            </div>
+            <h3>Club Rowing — New Boat Fund</h3>
+            <p>Replacing a 15-year-old shell ahead of the conference regatta season.</p>
+            <div class="opp-meta">
+                <span>University of Michigan</span>
+                <span>40 members</span>
+            </div>
+            <button class="opp-btn" data-modal="signup" data-role="sponsor">Sponsor this</button>
+        </article>
+
+        <article class="opp-card" data-category="business">
+            <div class="opp-top">
+                <span class="opp-tag tag-business">Business</span>
+                <span class="opp-goal">$2,200 goal</span>
+            </div>
+            <h3>Case Competition Team — Nationals Travel</h3>
+            <p>Flights and lodging for four students advancing to the national case competition finals.</p>
+            <div class="opp-meta">
+                <span>NYU Stern</span>
+                <span>18 members</span>
+            </div>
+            <button class="opp-btn" data-modal="signup" data-role="sponsor">Sponsor this</button>
+        </article>
+
+        <article class="opp-card" data-category="community">
+            <div class="opp-top">
+                <span class="opp-tag tag-community">Community</span>
+                <span class="opp-goal">$900 goal</span>
+            </div>
+            <h3>Food Security Coalition — Weekly Pantry</h3>
+            <p>Restocking a student-run food pantry serving 300+ students each week.</p>
+            <div class="opp-meta">
+                <span>UT Austin</span>
+                <span>52 members</span>
+            </div>
+            <button class="opp-btn" data-modal="signup" data-role="sponsor">Sponsor this</button>
+        </article>
+
+        <article class="opp-card" data-category="tech">
+            <div class="opp-top">
+                <span class="opp-tag tag-tech">Tech</span>
+                <span class="opp-goal">$4,000 goal</span>
+            </div>
+            <h3>Hackathon Collective — Annual 24hr Hackathon</h3>
+            <p>Prizes, catering, and swag for a 300-attendee student hackathon in the fall.</p>
+            <div class="opp-meta">
+                <span>Georgia Tech</span>
+                <span>200 members</span>
+            </div>
+            <button class="opp-btn" data-modal="signup" data-role="sponsor">Sponsor this</button>
+        </article>
+
+    </section>
+
+    <p class="empty-state" id="empty-state" hidden>No opportunities in this category yet — check back soon.</p>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <span class="logo"><span class="logo-mark" aria-hidden="true"></span>SponsorBridge</span>
+                <p>The bridge between student clubs and the sponsors who want to back them.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Platform</h4>
+                    <a href="opportunities.html">Opportunities</a>
+                    <a href="how-it-works.html">How It Works</a>
+                    <a href="about.html">About</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Account</h4>
+                    <a href="#" data-modal="login">Login</a>
+                    <a href="#" data-modal="signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 SponsorBridge. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Auth modal (shared by Login / Sign Up) -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+
+            <div class="modal-tabs">
+                <button class="modal-tab" data-tab="login">Login</button>
+                <button class="modal-tab" data-tab="signup">Sign Up</button>
+            </div>
+
+            <h2 id="modal-title" class="modal-title">Welcome back</h2>
+
+            <form id="auth-form" novalidate>
+                <div class="form-field signup-only">
+                    <label for="full-name">Full name</label>
+                    <input type="text" id="full-name" name="full-name" autocomplete="name">
+                </div>
+
+                <div class="form-field signup-only">
+                    <label>I am a...</label>
+                    <div class="role-select">
+                        <button type="button" class="role-option" data-role-option="club">Club</button>
+                        <button type="button" class="role-option" data-role-option="sponsor">Sponsor</button>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" autocomplete="current-password" required minlength="8">
+                </div>
+
+                <p class="form-error" id="form-error" hidden></p>
+
+                <button type="submit" class="submit-btn" id="submit-btn">Log in</button>
+            </form>
+
+            <p class="modal-switch">
+                <span id="switch-prompt">Don't have an account?</span>
+                <button type="button" id="switch-btn">Sign up</button>
+            </p>
+        </div>
+    </div>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
